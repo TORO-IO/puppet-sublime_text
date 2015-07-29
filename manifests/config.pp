@@ -5,9 +5,10 @@
 #   include sublime_text::config
 class sublime_text::config {
   $dir = "/Users/${::luser}/Library/Application Support/Sublime Text 3"
+  $pkgcontrol = "${dir}/Installed Pacakges"
   $packagedir = "${dir}/Packages"
 
-  file { [$dir, $packagedir]:
+  file { [$dir, $pkgcontrol, $packagedir]:
     ensure => directory
   }
 }
