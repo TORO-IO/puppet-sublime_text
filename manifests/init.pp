@@ -23,5 +23,4 @@ class sublime_text($build = '3083') {
     command => "curl -o ${sublime_text::config::packagedir}/Package Control.sublime-package https://packagecontrol.io/Package%20Control.sublime-package",
     creates => "${sublime_text::config::packagedir}/Package Control.sublime-package",
   }
-
 }
