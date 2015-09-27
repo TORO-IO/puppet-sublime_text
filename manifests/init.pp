@@ -20,7 +20,7 @@ class sublime_text($build = '3083') {
 
   # Fetch Package Control from Repository
   exec { 'SublimeText Package':
-    command => "curl -o ${sublime_text::config::packagedir}/Package Control.sublime-package https://packagecontrol.io/Package%20Control.sublime-package",
+    command => "curl -O ${sublime_text::config::packagedir}/Package Control.sublime-package https://packagecontrol.io/Package%20Control.sublime-package",
     creates => "${sublime_text::config::packagedir}/Package Control.sublime-package",
   }
 }
